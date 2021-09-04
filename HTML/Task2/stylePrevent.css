@@ -25,12 +25,14 @@ div{
     border: 5px outset #94cbdd;
     margin: 10px;
 }
+body{
+  background-color: #f1f2ee;}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #94cbdd;
+    background-color: #d7e3fc;
     border-radius: 20px;
   }
   

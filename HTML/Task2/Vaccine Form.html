@@ -5,10 +5,44 @@
         <meta charset="utf=8" name="Registration" content="COVID-19 Vaccine">
         <title> Corona Vaccine Registration </title>
         <link rel="stylesheet" href="style.css" >
-        
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #d7e3fc;
+                border-radius: 20px;
+            }
+            
+            li {
+                float: left;
+            }
+            
+            li a {
+                display: block;
+                color: gray;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #94cbdd;
+            }
+        </style>
+                    
     </head>
-        
+                    
     <body class="Form">
+        <ul>
+                        <li><a href="Symptoms.html">Symptoms</a></li>                       
+                        <li><a href="Prevention.html">Prevention</a></li>
+                        <li><a href="Vaccine Form.html">Vaccine Form</a></li>
+                        <li><a href="statstable.html">Statabale</a></li>
+        </ul>
+                        
+                        
         <form name="Information" action="Data.php" method="POST" enctype="multipart/form-data">
             
             <fieldset>
