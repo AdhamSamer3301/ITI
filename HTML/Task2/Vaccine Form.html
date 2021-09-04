@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf=8" name="Registration" content="COVID-19 Vaccine">
+        <title> Corona Vaccine Registration </title>
+        <link rel="stylesheet" href="style.css" >
+        
+    </head>
+        
+    <body class="Form">
+        <form name="Information" action="Data.php" method="POST" enctype="multipart/form-data">
+            
+            <fieldset>
+                  
+                <legend >Personal Information</legend>
+
+                <label>Name:</label> <br>
+                    <input type="text" name="name"> <br><br>
+                
+                <label>Mobile:</label><br>
+                    <input type="number" name="mobile"> <br><br>
+                
+                <label>Address:</label><br>
+                    <input type="text" name="address"> <br><br>
+                
+                <label>Governorate:</label><br>
+                    <select>
+                        <option>ِAlexnadria</option>
+                        <option>Cairo</option>
+                        <option>Luxour</option>
+                        <option>Sinai</option>
+                        <option>Matrouh</option>
+                        <option>Suez</option>
+                        <option>El Wadi ElGedid</option>
+                        <option>Souhag</option>
+                    </select> <br><br>
+
+                <label>BirthDay:</label><br>
+                    <input type="date" name="bDay"> <br><br>
+
+                <label>Nationality:</label><br>
+                    <input type="text" name="nationality"> <br><br>
+
+                <label>National ID:</label> <br>
+                    <input type="text" name="natID"> <br><br>    
+
+                <label>Upload ur ID Photo</label><br>
+                    <input type="file" name="natIDimg"> <br><br>
+
+                <label>Gender</label> <br>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female<br><br>
+
+                <label>Email:</label><br>
+                    <input type="email" name="email"> <br><br>
+
+                <label>Password:</label><br>
+                    <input type="password" name="password"> <br><br>
+
+                <label style="font-size: larger;"> <b>Submit</b></label><br>
+                    <input type="submit" name="submit" value="Send" class="Button" > <br>
+
+            </fieldset>
+
+           <!-- <fieldset style="margin-top: 40px;">
+                
+                <legend>General Information</legend>
+
+                <label>Image</label><br>
+                    <input type="image" src="../Task1/Resources/html.jpeg" name="image" width="100px" height="100px"> <br>
+
+                <label>Upload</label>
+                    <input type="file" name="file"> <br>
+
+                <hr>
+
+                <label>Fav Browser</label> <br>
+                    <input type="radio" name="favBrowser" value="Chrome"> Chrome<br>
+                    <input type="radio" name="favBrowser" value="Mozilla"> Mozilla<br>
+                    <input type="radio" name="favBrowser" value="Vivaldi"> Vivaldi<br>
+
+                <hr>
+                
+                <label>Fav Mobile</label> <br>
+                    <select>
+                        <option>Samsung</option>
+                        <option>Xiaomi</option>
+                        <option>Apple</option>
+                    </select>
+
+                <hr>   
+                    
+                <label>Time</label>
+                    <input type="time" name="Date_Time"> <br><br>
+
+                <label>Date</label>
+                    <input type="date" name="Date_Time"> <br><br>
+
+                <label>Date & Time</label>
+                    <input type="datetime" name="Date_Time"> <br><br>
+
+                <hr>
+                
+                <video controls autoplay style="width: 400x; height: 200px;">
+                    
+                    <source src="Resources/2021-09-02 09-09-16.mp4" type="video/mp4">
+                    
+                </video> <br>
+                
+                <hr>
+                
+                <audio controls autoplay>
+                    
+                    <source src="Resources/BattlePass_S4_MainTheme_Loop.mp3" type="audio/mp3">
+                    
+                </audio> <br>
+
+                
+
+                <label>Submit</label>
+                    <input type="submit" name="submit" value="send"> <br>
+
+                <hr>
+
+                
+
+            </fieldset> -->
+
+        </form>
+    </body>
+
+</html>
