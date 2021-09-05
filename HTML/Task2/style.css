@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 body {
     padding: 20px;
-    background-color: rgb(53, 53, 53);
+    background-color: #f1f2ee;
     
 }
 
@@ -16,7 +16,7 @@ h1,h2{
 }
 
 .Form{
-    background-color: rgb(212, 210, 228);
+    background-color: #f1f2ee;
     text-align: center;
     margin-left: 150px;
     margin-right: 150px; 
@@ -37,3 +37,27 @@ legend{
     margin: 10px;
     padding: 8px;
 }
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d7e3fc;
+    border-radius: 20px;
+  }
+
+  .nav li{
+    float: left;
+  }
+  
+  .nav li a {
+    display: block;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #94cbdd;
+  }
