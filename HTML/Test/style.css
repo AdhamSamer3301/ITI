@@ -1,0 +1,23 @@
+.para1{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(187, 255, 0);
+    background-color: blue;
+    background-attachment: scroll;
+    background-image: url("../Task1/Resources/html-definition-12-advantages-1.jpg");
+    border: 5px solid #000;
+    line-height: 20px;
+    letter-spacing: 15px;
+    direction: rtl;
+    text-decoration: underline;
+}
+.para2{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    text-transform: capitalize;
+    line-height: 25px;
+    
+}
