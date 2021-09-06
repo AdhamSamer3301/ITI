@@ -1,12 +1,72 @@
 body{
-    background-color: rgb(68, 139, 151);
+    background-color: #fff1e6;
     font-size: large;
 }
 
-h2, li{
+h2, h3,li{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.description{
+    direction: rtl;
+    text-align: right;
+    padding: 16px;
+    margin: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 5px;
+    border-color: 	rgb(128, 128, 128);
+    border-style:groove;
+    border-radius: 10px;
+    width: fit-content;
+    height: 600px;
+    width: 50%;
+    background-color: #ffff;
+    
+
+}
+.imgDiv{
+    padding: auto;
+    border: 0px;
+}
+img{
+   
+    height: 650px;
+    width: 500px;
+    object-fit: fill;
+    
+}
+h2,h3{
+    color: #B07D62;
+}
+dt{
+    text-indent: 15px;
+    font-weight: bold;
+    color: #B07D62;
+}
+.OverViewBody{
+    direction: rtl;
+    
+}
+.container{
+    display: flex;
+}
+.nav li{
+    float: left;
+  }
+  
+  .nav li a {
+    display: block;
+    color: #ffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #B07D62;
+  }
+  
