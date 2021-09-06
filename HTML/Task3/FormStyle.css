@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body {
+    padding: 20px;
+    background-color: rgb(68, 139, 151);
+    
+}
+
+div, p{
+    color: #A6A7A9;
+    font-size: large;
+}
+
+h1,h2{
+    color: #0096C7;
+}
+
+.Form{
+    background-color: rgb(68, 139, 151);
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px; 
+}
+
+label{
+    font-size: large;
+    
+}
+
+legend{
+    font-size: larger;
+    color: #000000;
+    font-weight: bolder;
+}
+
+.Button{
+    font-size: large;
+    margin: 10px;
+    padding: 8px;
+}
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d7e3fc;
+    border-radius: 20px;
+  }
+
+  .nav li{
+    float: left;
+  }
+  
+  .nav li a {
+    display: block;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #94cbdd;
+  }
