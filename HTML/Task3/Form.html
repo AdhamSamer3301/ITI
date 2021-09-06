@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf=8" name="Registration" content="100M Se7a Vaccines">
+        <title> 100M Se7a Registration </title>
+        <link rel="stylesheet" href="FormStyle.css" >
+        
+                    
+    </head>
+                    
+    <body class="Form">
+
+        <form name="Information" action="Data.php" method="POST" enctype="multipart/form-data">
+            
+            <fieldset>
+                  
+                <legend >Personal Information</legend>
+
+                <label>Name:</label> <br>
+                    <input type="text" name="name"> <br><br>
+                
+                <label>Mobile:</label><br>
+                    <input type="number" name="mobile"> <br><br>
+                
+                <label>Address:</label><br>
+                    <input type="text" name="address"> <br><br>
+                
+                <label>Governorate:</label><br>
+                    <select>
+                        <option>ِAlexnadria</option>
+                        <option>Cairo</option>
+                        <option>Luxour</option>
+                        <option>Sinai</option>
+                        <option>Matrouh</option>
+                        <option>Suez</option>
+                        <option>El Wadi ElGedid</option>
+                        <option>Souhag</option>
+                    </select> <br><br>
+
+                <label>Select your disease:</label><br>
+                    <select>
+                        <option>Virus C</option>
+                        <option>Cancer</option>
+                        <option>Breast Cancer</option>
+                        <option>COVID-19</option>
+                        <option>Kidney Failure</option>
+                        <option>Liver</option>
+                    </select> <br><br>
+
+                <label>BirthDay:</label><br>
+                    <input type="date" name="bDay"> <br><br>
+
+                <label>National ID:</label> <br>
+                    <input type="number" name="natID"> <br><br>    
+
+                <label>Upload ur ID Photo</label><br>
+                    <input type="file" name="natIDimg"> <br><br>
+
+                <label>Gender</label> <br>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female<br><br>
+
+                <label>Email:</label><br>
+                    <input type="email" name="email"> <br><br>
+
+                <label>Password:</label><br>
+                    <input type="password" name="password"> <br><br>
+
+                <label style="font-size: larger;"> <b>Submit</b></label><br>
+                    <input type="submit" name="submit" value="Send" class="Button" > <br>
+                    
+            </fieldset>
+
+        </form>
+    </body>
+
+</html>
