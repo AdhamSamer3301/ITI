@@ -129,7 +129,7 @@ function sayHi(){
         console.log(Sum(4,5));
 }
 
-/*(function welcome(){
+(function welcome(){
         
     var name = prompt("What's your name?");
 
@@ -138,7 +138,7 @@ function sayHi(){
         } else {
                 alert("You aren't eligible to join !")
         }
-})();*/
+})();
 
 function discount(price){
     var discount = 100 ;
@@ -200,9 +200,9 @@ function Test(){
         }
         Test3();
     }
-    Test2();
-    
+    Test2();  
 }
+
 /*for (let i = 0; i < 3; i++) {
     
     Test();

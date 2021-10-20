@@ -20,13 +20,14 @@ else{
 }
 //console.log(mainPrice);
 document.getElementById("js").innerHTML =mainPrice;
+*/
 
 Object={
     name:" 'Adham' ",
     Age:20
 }
 console.log(Object);
-document.getElementById("js").innerHTML =Object.name;*/
+document.getElementById("js").innerHTML =Object.name;
 
 
 
