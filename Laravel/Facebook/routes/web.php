@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,60 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group(['middleware' => ['web']] ,function() {   
+
+    Route::group(['namespace' => '\App\Http\Controllers'], function(){
+
+
+
+    Route::get('/', function () {
+         return view('welcome');
+    })->name('home');
+        
+        
+    Route::post('/signup', [
+
+        'uses'=>'UserController@postsignup',
+        'as'=>'signup' 
+    ]);
+
+
+    Route::post('/signin', [
+
+        'uses'=>'UserController@postsignin',
+        'as'=>'signin' 
+    ]);
+
+
+    Route::get('/dashboard', [
+
+        'uses'=>'UserController@getdashboard',
+        'as'=>'dashboard',
+        'middleware'=>'auth'
+    ]);
+
+
+    /*
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    });
+*/
+
+
 });
+});
+
+
+//Route::get('/login', [ussercontroller::postsignup, 'login']);
+
+
+/*
+Route::post('/signup', [
+    'uses' => 'ussercontroller@postsignup',
+    'as' => 'signup'
+]);
+
+
+
+*/
