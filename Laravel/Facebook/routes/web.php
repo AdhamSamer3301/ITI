@@ -15,16 +15,11 @@ use App\Http\Controllers;
 */
 
 
-<<<<<<< HEAD
 Route::group(['middleware' => ['web']] ,function() {
-=======
-Route::group(['middleware' => ['web']] ,function() {   
->>>>>>> 76d92f8a84eb00a4c52731c0f1c05dc299dd1403
 
     Route::group(['namespace' => '\App\Http\Controllers'], function(){
 
 
-<<<<<<< HEAD
     Route::get('/', function () {
         return view('welcome');
     })->name('home');
@@ -35,69 +30,50 @@ Route::group(['middleware' => ['web']] ,function() {
 
         'uses'=>'UserController@postsignup',
         'as'=>'signup'
-=======
-
-    Route::get('/', function () {
-         return view('welcome');
-    })->name('home');
-        
-        
-    Route::post('/signup', [
-
-        'uses'=>'UserController@postsignup',
-        'as'=>'signup' 
->>>>>>> 76d92f8a84eb00a4c52731c0f1c05dc299dd1403
     ]);
 
 
     Route::post('/signin', [
 
         'uses'=>'UserController@postsignin',
-<<<<<<< HEAD
         'as'=>'signin'
-=======
-        'as'=>'signin' 
->>>>>>> 76d92f8a84eb00a4c52731c0f1c05dc299dd1403
     ]);
 
 
     Route::get('/dashboard', [
 
-        'uses'=>'UserController@getdashboard',
+        'uses'=>'PostController@getdashboard',
         'as'=>'dashboard',
-<<<<<<< HEAD
         'middleware' => 'authenticated'
     ]);
 
-});
-});
+    Route::get('/logout', [
 
-=======
-        'middleware'=>'auth'
+        'uses'=>'UserController@getLogout',
+        'as'=>'logout'
     ]);
 
 
-    /*
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    });
-*/
+    Route::post('/createpost', [
 
+        'uses'=>'PostController@postCreatePost',
+        'as'=>'post.create',
+        'middleware' => 'authenticated'
+    ]);
+
+    Route::post('/edit', [
+        'uses' => 'PostController@postEditPost',
+        'as' =>'edit',
+        'middleware' => 'authenticated'
+    ]);
+
+
+    Route::get('/deletepost/{post_id}', [
+
+        'uses'=>'PostController@getDeletePost',
+        'as'=>'post.delete'
+    ]);
 
 });
 });
 
-
-//Route::get('/login', [ussercontroller::postsignup, 'login']);
-
-
-/*
-Route::post('/signup', [
-    'uses' => 'ussercontroller@postsignup',
-    'as' => 'signup'
-]);
-
-
-
-*/
->>>>>>> 76d92f8a84eb00a4c52731c0f1c05dc299dd1403

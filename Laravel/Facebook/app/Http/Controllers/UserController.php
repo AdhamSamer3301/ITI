@@ -8,12 +8,6 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    
-    public function getdashboard()
-    {
-        return view('dashboard');
-    }
- 
 
     public function postsignup(Request $request)
     {
@@ -27,18 +21,18 @@ class UserController extends Controller
         $email=$request['email'];
         $first_name=$request['first_name'];
         $password=bcrypt($request['password']);
-        
+
 
         $user=new User();
         $user->email=$email;
         $user->name=$first_name;
         $user->password=$password;
-       
-       
+
+
 
         $user->save();
         return redirect()->route('dashboard');
-  
+
 
     }
 
@@ -48,7 +42,7 @@ class UserController extends Controller
 
         $this->validate($request,[
             'email'=>'required|email',
-            
+
             'password'=>'required|min:3',
 
         ]);
@@ -59,5 +53,11 @@ class UserController extends Controller
         }
         return redirect()->back();
 
+    }
+
+    public function getLogout(){
+
+        Auth::logout();
+        return redirect()->route('home');
     }
 }

@@ -2,16 +2,16 @@
 
 @section('content')
 
-
 <section class="row new-post">
-        <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-3">
+            @include('includes.message-block')
             <header><h3>What do you have to say?</h3></header>
-            <form action="" >
+            <form action="{{route('post.create')}}" method="POST" >
                 <div class="form-group">
                     <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Your Post"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Create Post</button>
-                
+                <input type="hidden" name="_token" value="{{ Session::token() }}">
             </form>
         </div>
     </section>
@@ -19,59 +19,58 @@
     <section class="row posts">
         <div class="col-md-6 col-md-offset-3">
             <header><h3>What other people say...</h3></header>
-            <article class="post">
+            @foreach ($posts as $post)
+
+            <article class="post" data-postid="{{ $post->id }}">
                 <p>
-                Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.
+                {{$post->body}}
                 </p>
                 <div class="info">
-                    posted in may 2020 
-
+                    Posted by {{$post->user->name}}  in {{$post->created_at}}
                 </div>
 
                 <div class="interaction">
-                    <a href="#">Like</a>
+                    <a href="#">Like</a> |
                     <a href="#">DisLike</a>
-                    <a href="#">Delete</a>
-                    <a href="#">Edit</a>
+                    @if (Auth::user() == $post->user)
+                    | <a href="#" class="edit">Edit</a> |
+                    <a href="{{route('post.delete',['post_id' => $post->id])}}">Delete</a>
+                    @endif
 
                 </div>
 
             </article>
-       
+            @endforeach
+
         </div>
     </section>
 
-
-    <section class="row posts">
-        <div class="col-md-6 col-md-offset-3">
-            
-            <article class="post">
-                <p>
-                Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.
-                </p>
-                <div class="info">
-                    posted in may 2020 
+    <div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Edit Post</h4>
                 </div>
-
-                <div class="interaction">
-                    <a href="#">Like</a>
-                    <a href="#">DisLike</a>
-                    <a href="#">Delete</a>
-                    <a href="#">Edit</a>
-
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="post-body">Edit the Post</label>
+                            <textarea class="form-control" name="post-body" id="post-body" rows="5"></textarea>
+                        </div>
+                    </form>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-            </article>
-       
-        </div>
-    </section>
-
-
-
-
-
-
-
-
+    <script>
+        var token ='{{Session::token()}}';
+        var url = '{{route('edit')}}';
+    </script>
 
 @endsection

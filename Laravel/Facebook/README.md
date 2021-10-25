@@ -66,8 +66,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## How to run:
 
-1- First, Create a database in phpmyadmin called "fblaravel"
-2- Copy these codes:
+1- First, Create a database in phpmyadmin called "fblaravel".
+2- Copy these codes:.
+
     ```
     composer install
     cp .env.example .env

@@ -1,7 +1,7 @@
 .new-post {
     padding: 16px 0;
     border-bottom: 1px solid #ccc;
-   
+
 }
 
 .new-post header,
@@ -19,4 +19,25 @@
 .posts .post .info {
     color: #aaa;
     font-style: italic;
+}
+
+.error,
+.success {
+    text-align: center;
+}
+
+.error {
+    background-color: #f9b5af;
+    color: red;
+}
+
+.error ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.success {
+    background-color: #d1f9da;
+    color: green;
 }
