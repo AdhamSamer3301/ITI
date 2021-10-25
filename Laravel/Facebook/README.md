@@ -23,18 +23,11 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## How to run:
 
-<<<<<<< HEAD
-1- First, Create a database in phpmyadmin called "fblaravel".
-2- Copy these codes:.
-
-    ```
-=======
 1- Create a database in phpmyadmin called "fblaravel".
 
 2- Copy these codes:
 
     
->>>>>>> 6e116827c8841b98233f0ded6f425c9171c7db4b
     composer install
     php artisan migrate
     php artisan serve
