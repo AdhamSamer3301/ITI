@@ -28,7 +28,8 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 2- Copy these codes:
 
     
+    cd facebook
     composer install
-    php artisan migrate
+    php artisan migrate:fresh
     php artisan serve
     
