@@ -11,9 +11,14 @@ class User extends Model  implements Authenticatable
 
     use \Illuminate\Auth\Authenticatable;
     protected $table = 'users';
+    
 
     public function posts()
     {
         return $this->hasMany('App\Models\Post');
+    }
+    public function likes()
+    {
+        return $this->hasMany('App\Models\Like');
     }
 }

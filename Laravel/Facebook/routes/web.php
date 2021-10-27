@@ -39,7 +39,7 @@ Route::group(['middleware' => ['web']] ,function() {
         'as'=>'signin'
     ]);
 
-
+   
     Route::get('/dashboard', [
 
         'uses'=>'PostController@getdashboard',
@@ -73,7 +73,26 @@ Route::group(['middleware' => ['web']] ,function() {
         'uses'=>'PostController@getDeletePost',
         'as'=>'post.delete'
     ]);
+    Route::get('/account', [
+        'uses' => 'UserController@getAccount',
+        'as' => 'account'
+    ]);
+    
+   /* Route::get('/userimage/{filename}', [
+    'uses' => 'UserController@getUserImage',
+    'as' => 'account.image'
+]);*/
+    Route::post('/updateAccount', [
+        'uses' => 'UserController@postSaveAccount',
+        'as' => 'account.save'
+    ]);
+    Route::post('/like', [
+        'uses' => 'PostController@postLiketPost',
+        'as' =>'like',
+     ]);
 
-});
+
+
+ });
 });
 
